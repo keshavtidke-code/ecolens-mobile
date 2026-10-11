@@ -1,0 +1,60 @@
+{
+    "expo":  {
+                 "name":  "EcoLens",
+                 "slug":  "ecolens",
+                 "scheme":  "ecolens",
+                 "version":  "0.1.0",
+                 "orientation":  "portrait",
+                 "userInterfaceStyle":  "light",
+                 "icon":  "./assets/icon.png",
+                 "splash":  {
+                                "image":  "./assets/splash.png",
+                                "resizeMode":  "contain",
+                                "backgroundColor":  "#14532d"
+                            },
+                 "ios":  {
+                             "supportsTablet":  false,
+                             "bundleIdentifier":  "com.ecolens.app",
+                             "infoPlist":  {
+                                               "NSAppTransportSecurity":  {
+                                                                              "NSAllowsLocalNetworking":  true
+                                                                          }
+                                           }
+                         },
+                 "android":  {
+                                 "package":  "com.ecolens.app",
+                                 "adaptiveIcon":  {
+                                                      "foregroundImage":  "./assets/adaptive-icon.png",
+                                                      "backgroundColor":  "#14532d"
+                                                  },
+                                 "permissions":  [
+                                                     "CAMERA",
+                                                     "ACCESS_FINE_LOCATION",
+                                                     "ACCESS_COARSE_LOCATION",
+                                                     "READ_MEDIA_IMAGES",
+                                                     "READ_MEDIA_VISUAL_USER_SELECTED"
+                                                 ]
+                             },
+                 "plugins":  [
+                                 "expo-router",
+                                 "expo-secure-store",
+                                 "expo-sqlite",
+                                 [
+                                     "expo-camera",
+                                     {
+                                         "cameraPermission":  "EcoLens uses the camera to photograph the ecosystem around you.",
+                                         "recordAudioAndroid":  false
+                                     }
+                                 ],
+                                 [
+                                     "expo-location",
+                                     {
+                                         "locationWhenInUsePermission":  "EcoLens uses your location to look up the place and weather for each observation."
+                                     }
+                                 ]
+                             ],
+                 "extra":  {
+                               "apiUrl":  "http://10.0.2.2:8000"
+                           }
+             }
+}
