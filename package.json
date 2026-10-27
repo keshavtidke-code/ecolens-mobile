@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@expo/vector-icons": "^15.0.0",
+    "@supabase/supabase-js": "^2.118.0",
     "axios": "^1.13.0",
     "babel-preset-expo": "~56.0.0",
     "expo": "~56.0.0",
